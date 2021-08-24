@@ -13,8 +13,8 @@ export default class Posts extends BaseSchema {
         .unsigned()
         .references('users.id')
         .onDelete('CASCADE')
-      table.timestamp('created_at', { useTz: false })
-      table.timestamp('updated_at', { useTz: false })
+      table.timestamp('created_at')
+      table.timestamp('updated_at')
     })
   }
 
