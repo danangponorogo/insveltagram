@@ -1,0 +1,13 @@
+{
+    "include": [
+        "**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "build"
+    ],
+    "compilerOptions": {
+        "jsx": "preserve",
+        "esModuleInterop": true
+    }
+}
