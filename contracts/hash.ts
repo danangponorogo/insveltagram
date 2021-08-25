@@ -11,9 +11,9 @@ declare module '@ioc:Adonis/Core/Hash' {
       config: BcryptConfig,
       implementation: BcryptContract,
     },
-    argon: {
-      config: ArgonConfig,
-      implementation: ArgonContract,
-    },
+    // argon: {
+    //   config: ArgonConfig,
+    //   implementation: ArgonContract,
+    // },
   }
 }
