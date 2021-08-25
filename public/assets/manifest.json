@@ -1,11 +1,11 @@
 {
-  "assets/app.css": "/assets/app.2bbe3f1a.css",
-  "assets/app.js": "/assets/app.67c63190.js",
-  "assets/img/Insveltagram.pdn": "/assets/img/Insveltagram.dda137e2.pdn",
-  "assets/img/logo.pdn": "/assets/img/logo.8d4d96a9.pdn",
-  "assets/img/Insveltagram.docx": "/assets/img/Insveltagram.71dcbea8.docx",
-  "assets/img/adonisgram.png": "/assets/img/adonisgram.cdeed311.png",
-  "assets/img/ipa.jpg": "/assets/img/ipa.3063b0d6.jpg",
-  "assets/img/Insveltagram.png": "/assets/img/Insveltagram.ea930da7.png",
-  "assets/img/logo.png": "/assets/img/logo.499e48df.png"
+  "assets/app.css": "http://localhost:8080/assets/app.css",
+  "assets/app.js": "http://localhost:8080/assets/app.js",
+  "assets/img/Insveltagram.pdn": "http://localhost:8080/assets/img/Insveltagram.dda137e2.pdn",
+  "assets/img/logo.pdn": "http://localhost:8080/assets/img/logo.8d4d96a9.pdn",
+  "assets/img/Insveltagram.docx": "http://localhost:8080/assets/img/Insveltagram.71dcbea8.docx",
+  "assets/img/adonisgram.png": "http://localhost:8080/assets/img/adonisgram.cdeed311.png",
+  "assets/img/ipa.jpg": "http://localhost:8080/assets/img/ipa.3063b0d6.jpg",
+  "assets/img/Insveltagram.png": "http://localhost:8080/assets/img/Insveltagram.ea930da7.png",
+  "assets/img/logo.png": "http://localhost:8080/assets/img/logo.499e48df.png"
 }
