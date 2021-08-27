@@ -44,14 +44,14 @@ const hashConfig: HashConfig = {
     | npm install phc-argon2
     |
     */
-    // argon: {
-    //   driver: 'argon2',
-    //   variant: 'id',
-    //   iterations: 3,
-    //   memory: 4096,
-    //   parallelism: 1,
-    //   saltSize: 16,
-    // },
+    argon: {
+      driver: 'argon2',
+      variant: 'id',
+      iterations: 3,
+      memory: 4096,
+      parallelism: 1,
+      saltSize: 16,
+    },
 
     /*
     |--------------------------------------------------------------------------
