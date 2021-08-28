@@ -12,9 +12,10 @@
   <div class="row pt-5 justify-content-center align-items-center g-3">
     <div class="col-8 text-center">
       <p>
-        You have to verify your account to be able to change your profile and
-        post messages.<br />
-        Please verify your Account by clicking the link we already sent to Your email.
+        You have to <b>VERIFY YOUR ACCOUNT</b> to be able to change your profile
+        and post messages.<br />
+        Please verify your Account
+        <b>BY CLICKING THE LINK WE ALREADY SENT TO YOUR EMAIL</b>.
         <br />
         If You don't see it then please click button below to resend the email verification.
       </p>
