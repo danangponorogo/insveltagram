@@ -1,6 +1,11 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import User from 'App/Models/User'
 import { DateTime } from 'luxon'
+import publicPath from "@ioc:Adonis/Core/AssetsManager"
+
+let img = {
+    Insveltagram: publicPath.assetPath("assets/img/Insveltagram.png")
+}
 
 export default class EmailVerifiesControllerOld {
     // public async index({ auth }: HttpContextContract) {
@@ -59,7 +64,7 @@ export default class EmailVerifiesControllerOld {
         if (request.hasValidSignature()) {
             const user = await User.findByOrFail('email', params.email)
             user.email_verified_at = DateTime.local()
-            user.save()
+            await user.save()
             return response.redirect(`/${user.username}`)
         } else {
             return 'Invalid Token'

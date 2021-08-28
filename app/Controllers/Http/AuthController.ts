@@ -1,7 +1,7 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import { schema, rules } from '@ioc:Adonis/Core/Validator'
-import publicPath from "@ioc:Adonis/Core/AssetsManager";
-import User from 'App/Models/User';
+import publicPath from "@ioc:Adonis/Core/AssetsManager"
+import User from 'App/Models/User'
 // import { Inertia } from '@inertiajs/inertia'
 // import Mail from '@ioc:Adonis/Addons/Mail';
 
