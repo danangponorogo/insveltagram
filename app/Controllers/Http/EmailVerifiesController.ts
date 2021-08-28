@@ -1,11 +1,6 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import User from 'App/Models/User'
 import { DateTime } from 'luxon'
-import publicPath from "@ioc:Adonis/Core/AssetsManager"
-
-let img = {
-    Insveltagram: publicPath.assetPath("assets/img/Insveltagram.png")
-}
 
 export default class EmailVerifiesControllerOld {
     // public async index({ auth }: HttpContextContract) {
