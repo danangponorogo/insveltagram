@@ -101,7 +101,7 @@ export default class ProfilesController {
                     {
                         name: imageName
                     })
-                auth.user.avatar = `/images/${imageName}`
+                auth.user.avatar = `/images/${auth.user.id}${imageName}`
             }
 
             await auth.user.save()

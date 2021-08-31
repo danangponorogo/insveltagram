@@ -54,7 +54,7 @@ export default class PostsController {
             name: imageName
           })
         const post = new Post()
-        post.image = `/images/${imageName}`
+        post.image = `/images/${auth.user.id}${imageName}`
         post.caption = req.caption
         post.userId = auth.user.id
         await post?.save()
