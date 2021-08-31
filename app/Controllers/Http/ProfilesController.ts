@@ -3,6 +3,7 @@ import User from 'App/Models/User'
 import publicPath from "@ioc:Adonis/Core/AssetsManager";
 import Application from '@ioc:Adonis/Core/Application'
 // import { UserFactory } from 'Database/factories';
+import Env from '@ioc:Adonis/Core/Env'
 
 
 let img = {
@@ -96,12 +97,12 @@ export default class ProfilesController {
             })
 
             if (avatar) {
-                const imageName = new Date().getTime() + `.${avatar.extname}`
-                await avatar.move(Application.publicPath('images'),
+                const imageName = `${auth.user.id}${new Date().getTime()}.${avatar.extname}`
+                await avatar.move(Application.makePath(Env.get('STORAGE_URL')),
                     {
                         name: imageName
                     })
-                auth.user.avatar = `/images/${auth.user.id}${imageName}`
+                auth.user.avatar = `${Env.get('STORAGE_URL')}${imageName}`
             }
 
             await auth.user.save()

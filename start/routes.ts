@@ -1,24 +1,6 @@
-/*
-|--------------------------------------------------------------------------
-| Routes
-|--------------------------------------------------------------------------
-|
-| This file is dedicated for defining HTTP routes. A single file is enough
-| for majority of projects, however you can define routes in different
-| files and just make sure to import them inside this file. For example
-|
-| Define routes in following two files
-| ├── start/routes/cart.ts
-| ├── start/routes/customer.ts
-|
-| and then import them inside `start/routes.ts` as follows
-|
-| import './routes/cart'
-| import './routes/customer''
-|
-*/
-
 import Route from '@ioc:Adonis/Core/Route'
+import Application from '@ioc:Adonis/Core/Application'
+import Env from '@ioc:Adonis/Core/Env'
 
 Route.get('/test', async ({ inertia }) => {
   return inertia.render('Test', { nama: 'Danang in Route render' })
@@ -46,4 +28,7 @@ Route.post('/post/store', 'PostsController.store').middleware('auth')
 Route.delete('/follow/:userId', 'FollowsController.destroy').middleware('auth')
 Route.post('/follow/:userId', 'FollowsController.store').middleware('auth')
 
+Route.get(`${Env.get('STORAGE_URL')}:filename`, async ({ response, params }) => {
+  response.download(Application.makePath(Env.get('STORAGE_URL'), params.filename))
+})
 Route.get('/:username', 'ProfilesController.index').middleware('auth')

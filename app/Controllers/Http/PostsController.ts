@@ -3,6 +3,7 @@ import publicPath from "@ioc:Adonis/Core/AssetsManager";
 import Application from '@ioc:Adonis/Core/Application'
 import Post from 'App/Models/Post';
 import { schema } from '@ioc:Adonis/Core/Validator'
+import Env from '@ioc:Adonis/Core/Env'
 
 let img = {
   Insveltagram: publicPath.assetPath("assets/img/Insveltagram.png"),
@@ -48,13 +49,14 @@ export default class PostsController {
     })
     if (auth.user !== undefined) {
       if (req.image) {
-        const imageName = new Date().getTime() + `.${req.image.extname}`
-        await req.image.move(Application.publicPath('images'),
+        const imageName = `${auth.user.id}${new Date().getTime()}.${req.image.extname}`
+        await req.image.move(Application.makePath(Env.get('STORAGE_URL')),
           {
             name: imageName
           })
         const post = new Post()
-        post.image = `/images/${auth.user.id}${imageName}`
+        const imagePost = `${Env.get('STORAGE_URL')}${imageName}`
+        post.image = imagePost
         post.caption = req.caption
         post.userId = auth.user.id
         await post?.save()
