@@ -50,12 +50,12 @@ export default class PostsController {
     if (auth.user !== undefined) {
       if (req.image) {
         const imageName = `${auth.user.id}${new Date().getTime()}.${req.image.extname}`
-        await req.image.move(Application.makePath(Env.get('STORAGE_URL')),
+        await req.image.move(Application.makePath(Env.get('UPLOADS_URL')),
           {
             name: imageName
           })
         const post = new Post()
-        const imagePost = `${Env.get('STORAGE_URL')}${imageName}`
+        const imagePost = `${Env.get('UPLOADS_URL')}${imageName}`
         post.image = imagePost
         post.caption = req.caption
         post.userId = auth.user.id

@@ -28,7 +28,7 @@ Route.post('/post/store', 'PostsController.store').middleware('auth')
 Route.delete('/follow/:userId', 'FollowsController.destroy').middleware('auth')
 Route.post('/follow/:userId', 'FollowsController.store').middleware('auth')
 
-Route.get(`${Env.get('STORAGE_URL')}:filename`, async ({ response, params }) => {
-  response.download(Application.makePath(Env.get('STORAGE_URL'), params.filename))
+Route.get(`${Env.get('UPLOADS_URL')}:filename`, async ({ response, params }) => {
+  response.download(Application.makePath(Env.get('UPLOADS_URL'), params.filename))
 })
 Route.get('/:username', 'ProfilesController.index').middleware('auth')

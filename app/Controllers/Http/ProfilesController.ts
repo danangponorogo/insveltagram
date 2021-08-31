@@ -98,11 +98,11 @@ export default class ProfilesController {
 
             if (avatar) {
                 const imageName = `${auth.user.id}${new Date().getTime()}.${avatar.extname}`
-                await avatar.move(Application.makePath(Env.get('STORAGE_URL')),
+                await avatar.move(Application.makePath(Env.get('UPLOADS_URL')),
                     {
                         name: imageName
                     })
-                auth.user.avatar = `${Env.get('STORAGE_URL')}${imageName}`
+                auth.user.avatar = `${Env.get('UPLOADS_URL')}${imageName}`
             }
 
             await auth.user.save()
