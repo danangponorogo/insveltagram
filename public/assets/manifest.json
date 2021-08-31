@@ -1,6 +1,8 @@
 {
   "assets/app.css": "http://localhost:8080/assets/app.css",
   "assets/app.js": "http://localhost:8080/assets/app.js",
+  "assets/node_modules_svelte-carousel_src_components_Arrow_Arrow_svelte-node_modules_svelte-carousel_s-8a0bf1.css": "http://localhost:8080/assets/node_modules_svelte-carousel_src_components_Arrow_Arrow_svelte-node_modules_svelte-carousel_s-8a0bf1.css",
+  "assets/vendors-node_modules_svelte-carousel_src_main_js.js": "http://localhost:8080/assets/vendors-node_modules_svelte-carousel_src_main_js.js",
   "assets/img/Insveltagram.pdn": "http://localhost:8080/assets/img/Insveltagram.dda137e2.pdn",
   "assets/img/logo.pdn": "http://localhost:8080/assets/img/logo.8d4d96a9.pdn",
   "assets/img/Insveltagram.docx": "http://localhost:8080/assets/img/Insveltagram.71dcbea8.docx",

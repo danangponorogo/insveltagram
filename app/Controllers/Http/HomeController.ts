@@ -14,6 +14,15 @@ export default class HomeController {
             fullUser = await User.findBy('username', auth.user.username)
         }
 
+        const people = await User.query().whereNotNull('email_verified_at')
+        const peopleFiltered = people.map((d) => {
+            return {
+                name: d.name,
+                username: d.username,
+                avatar: d.avatar
+            }
+        })
+
         if (fullUser) {
             await auth.user?.load('followings')
             let userIds: number[],
@@ -64,7 +73,8 @@ export default class HomeController {
                     avatar: auth.user?.avatar
                 },
                 user,
-                posts: filteredPosts
+                posts: filteredPosts,
+                peoples: peopleFiltered
             })
         } else {
             return inertia.render('_404', {
