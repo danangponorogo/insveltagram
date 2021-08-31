@@ -90,7 +90,11 @@ export default class ProfilesController {
                 auth.user.details = details
             }
 
-            const avatar = request.file('avatar')
+            const avatar = request.file('avatar', {
+                size: '2mb',
+                extnames: ['jpg', 'jpeg', 'png', 'svg']
+            })
+
             if (avatar) {
                 const imageName = new Date().getTime() + `.${avatar.extname}`
                 await avatar.move(Application.publicPath('images'),
